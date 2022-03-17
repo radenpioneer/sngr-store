@@ -1,0 +1,27 @@
+{
+  "name": "sngr-store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/radenpioneer/sngr-store.git",
+  "author": "R. Ilham Sastronegoro <radenpioneer@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "shared"
+  ],
+  "scripts": {
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev:backend": "yarn workspace backend develop",
+    "build:frontend": "yarn workspace frontend build",
+    "build:backend": "yarn workspace backend build",
+    "start:frontend": "yarn workspace frontend start",
+    "start:backend": "yarn workspace backend start",
+    "preview:frontend": "run-s build:frontend start:frontend",
+    "preview:backend": "run-s build:backend start:backend",
+    "dev": "run-p dev:*",
+    "build": "run-p build:*",
+    "start": "run-p start:*",
+    "preview": "run-p preview:*"
+  }
+}
